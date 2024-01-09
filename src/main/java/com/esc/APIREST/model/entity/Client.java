@@ -1,17 +1,16 @@
 package com.esc.APIREST.model.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Builder
 @Entity
 @Table(name = "client")
 public class Client implements Serializable {
@@ -30,5 +29,5 @@ public class Client implements Serializable {
     private String email;
 
     @Column(name = "createdOn")
-    private Data createdOn;
+    private Date createdOn;
 }
